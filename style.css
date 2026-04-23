@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: rgb(67, 0, 67);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(67, 0, 67);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #790084;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* SECTION (TIGHT SPACING) */
+.section {
+    padding: 70px 20px 20px;
+    scroll-margin-top: 30px;
+}
+
+/* HOME */
+.home-section {
+    background: linear-gradient(to right, rgb(67, 0, 67), #790084);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    background-color: white;
+    color: rgb(67, 0, 67);
+    width: 80%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h2 {
+    margin-bottom: 18px;
+}
+
+.home-text h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.home-text h1 span {
+    color: #790084;
+}
+
+.home-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn.primary {
+    background-color: rgb(67, 0, 67);
+    color: white;
+}
+
+.btn.secondary {
+    border: 2px solid rgb(67, 0, 67);
+    color: rgb(67, 0, 67);
+}
+
+.home-image {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.home-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: rgb(67, 0, 67);
+    font-size: 22px;
+    transition: 0.3s;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #790084;
+}
+
+/* OTHER SECTIONS */
+.purple-bg {
+    background: linear-gradient(to right, rgb(67, 0, 67), #790084);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-box {
+    background-color: white;
+    color: rgb(67, 0, 67);
+    width: 80%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* LIST */
+.content-box ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.content-box li {
+    margin-bottom: 8px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid rgb(67, 0, 67);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(67, 0, 67);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .content-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .home-image img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(67, 0, 67);
+        width: 200px;
+        padding: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+    }
+}
