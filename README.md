@@ -1,7 +1,7 @@
 A responsive Personal Portfolio Website showcasing my projects, technical skills, leadership experience, and achievements, built using HTML, CSS, and JavaScript.
 
 Live Website
-https://anshikaagoyall.github.io/portfolio
+https://anshikaagoyall.github.io/Portfolio/
 
 Built With
 - HTML  
